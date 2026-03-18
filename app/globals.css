@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+a,
+button,
+input,
+textarea {
+  transition-property: color, background-color, border-color, opacity, transform,
+    box-shadow;
+  transition-duration: 200ms;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #f8fafc;
+}
+
+.container-shell {
+  @apply mx-auto max-w-7xl px-6 lg:px-8;
+}
+
+.display-title {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+.surface-grid {
+  background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-position: center;
+  background-size: 48px 48px;
+}
