@@ -84,7 +84,7 @@ export type Dictionary = {
       placeholders: { name: string; email: string; message: string };
       submit: string;
       success: string;
-      sendError: string;
+      mailSubject: string;
       errors: {
         name: string;
         emailRequired: string;
@@ -223,8 +223,8 @@ const dictionaries: Record<Locale, Dictionary> = {
           message: "How can we help?",
         },
         submit: "Send",
-        success: "Thanks. We'll get back to you soon.",
-        sendError: "Something went wrong. Please try again or email us directly.",
+        success: "Your email client will open. Send the message to reach us.",
+        mailSubject: "Contact from DevStack Labs website",
         errors: {
           name: "Please enter your name.",
           emailRequired: "Please enter your email.",
@@ -420,8 +420,8 @@ const dictionaries: Record<Locale, Dictionary> = {
           message: "¿En qué podemos ayudarte?",
         },
         submit: "Enviar",
-        success: "Gracias. Te responderemos pronto.",
-        sendError: "Algo salió mal. Intenta de nuevo o escríbenos por correo.",
+        success: "Se abrirá tu correo. Envía el mensaje para contactarnos.",
+        mailSubject: "Contacto - DevStack Labs",
         errors: {
           name: "Por favor, ingresa tu nombre.",
           emailRequired: "Por favor, ingresa tu correo.",

@@ -55,7 +55,10 @@ export default async function ContactPage({ params }: ContactPageProps) {
         </a>
 
         <div className="mt-10">
-          <ContactForm copy={dictionary.contact.form} />
+          <ContactForm
+            copy={dictionary.contact.form}
+            recipientEmail={dictionary.site.contactEmail}
+          />
         </div>
       </section>
     </div>

@@ -40,17 +40,9 @@ NEXT_PUBLIC_BASE_PATH=/<repo-name> npm run build
 - **Project site:** `https://<your-username>.github.io/<repo-name>/`
 - **User/org site:** If the repo is named `<username>.github.io`, edit `.github/workflows/deploy-pages.yml` and set `NEXT_PUBLIC_BASE_PATH: ""` in the Build step so the site is served at `https://<username>.github.io/`.
 
-## Contact form (Formspree)
+## Contact form
 
-The contact form sends submissions to **devstacklabshq@gmail.com** via [Formspree](https://formspree.io):
-
-1. Sign up at [formspree.io](https://formspree.io) and create a new form.
-2. Set the notification email to **devstacklabshq@gmail.com**.
-3. Copy the form ID from the form endpoint (e.g. `https://formspree.io/f/abc123xyz` → ID is `abc123xyz`).
-4. In the repo: **Settings → Secrets and variables → Actions**: add a secret named `FORMSPREE_FORM_ID` with that ID.
-5. Re-run the "Deploy to GitHub Pages" workflow (or push a commit). The built site will then POST the form to Formspree and you’ll receive emails at devstacklabshq@gmail.com.
-
-For local development, create a `.env.local` with `NEXT_PUBLIC_FORMSPREE_FORM_ID=your_form_id` so the form works when testing.
+The contact form uses a **mailto** link: when the user clicks Send, the browser opens the default email client (Gmail, Mail, Outlook, etc.) with **devstacklabshq@gmail.com** as the recipient and the name, email, and message pre-filled. No signup or third-party service required.
 
 ## Custom domain
 
