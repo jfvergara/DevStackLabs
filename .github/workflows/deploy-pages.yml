@@ -35,6 +35,8 @@ jobs:
           # For project site: https://<user>.github.io/<repo>/
           # For user/org site (repo named <user>.github.io) set to ""
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          # Formspree form ID so contact form emails go to devstacklabshq@gmail.com (create form at formspree.io, add secret in repo Settings → Secrets)
+          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.FORMSPREE_FORM_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

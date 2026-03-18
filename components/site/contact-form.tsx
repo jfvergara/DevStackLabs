@@ -38,17 +38,24 @@ type ContactFormProps = {
   copy: Dictionary["contact"]["form"];
 };
 
+const FORMSPREE_URL = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID}`
+  : null;
+
 export function ContactForm({ copy }: ContactFormProps) {
   const [values, setValues] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
   const [submitErrors, setSubmitErrors] = useState<FormErrors>({});
+  const [sending, setSending] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
 
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setSubmitted(false);
+    setSendFailed(false);
     setValues((prev) => ({ ...prev, [field]: value }));
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement)?.value?.trim() ?? "";
@@ -59,8 +66,27 @@ export function ContactForm({ copy }: ContactFormProps) {
     setValues(submitValues);
     setSubmitErrors(errors);
     setSubmitted(true);
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(errors).length > 0) return;
+
+    if (!FORMSPREE_URL) {
+      setSendFailed(true);
+      return;
+    }
+
+    setSending(true);
+    setSendFailed(false);
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(submitValues),
+      });
+      if (!res.ok) throw new Error("Formspree error");
       setValues(initialState);
+    } catch {
+      setSendFailed(true);
+    } finally {
+      setSending(false);
     }
   }
 
@@ -125,12 +151,15 @@ export function ContactForm({ copy }: ContactFormProps) {
         </div>
       </div>
       <div className="mt-6">
-        <Button type="submit" size="lg">
-          {copy.submit}
+        <Button type="submit" size="lg" disabled={sending}>
+          {sending ? "…" : copy.submit}
         </Button>
       </div>
-      {submitted && Object.keys(submitErrors).length === 0 ? (
+      {submitted && Object.keys(submitErrors).length === 0 && !sendFailed ? (
         <p className="mt-4 text-sm text-emerald-300">{copy.success}</p>
+      ) : null}
+      {sendFailed ? (
+        <p className="mt-4 text-sm text-rose-300">{copy.sendError}</p>
       ) : null}
     </form>
   );

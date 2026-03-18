@@ -84,6 +84,7 @@ export type Dictionary = {
       placeholders: { name: string; email: string; message: string };
       submit: string;
       success: string;
+      sendError: string;
       errors: {
         name: string;
         emailRequired: string;
@@ -223,6 +224,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         },
         submit: "Send",
         success: "Thanks. We'll get back to you soon.",
+        sendError: "Something went wrong. Please try again or email us directly.",
         errors: {
           name: "Please enter your name.",
           emailRequired: "Please enter your email.",
@@ -419,6 +421,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         },
         submit: "Enviar",
         success: "Gracias. Te responderemos pronto.",
+        sendError: "Algo salió mal. Intenta de nuevo o escríbenos por correo.",
         errors: {
           name: "Por favor, ingresa tu nombre.",
           emailRequired: "Por favor, ingresa tu correo.",
