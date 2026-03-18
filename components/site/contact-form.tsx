@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 
 import { Button } from "@/components/ui/button";
 import type { Dictionary } from "@/data/dictionary";
@@ -11,11 +11,28 @@ type FormState = {
   message: string;
 };
 
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
 const initialState: FormState = {
   name: "",
   email: "",
   message: "",
 };
+
+function validate(
+  values: FormState,
+  copy: Dictionary["contact"]["form"]["errors"]
+): FormErrors {
+  const next: FormErrors = {};
+  if (!values.name.trim()) next.name = copy.name;
+  if (!values.email.trim()) {
+    next.email = copy.emailRequired;
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+    next.email = copy.emailInvalid;
+  }
+  if (!values.message.trim()) next.message = copy.messageRequired;
+  return next;
+}
 
 type ContactFormProps = {
   copy: Dictionary["contact"]["form"];
@@ -24,18 +41,7 @@ type ContactFormProps = {
 export function ContactForm({ copy }: ContactFormProps) {
   const [values, setValues] = useState<FormState>(initialState);
   const [submitted, setSubmitted] = useState(false);
-
-  const errors = useMemo(() => {
-    const next: Partial<Record<keyof FormState, string>> = {};
-    if (!values.name.trim()) next.name = copy.errors.name;
-    if (!values.email.trim()) {
-      next.email = copy.errors.emailRequired;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      next.email = copy.errors.emailInvalid;
-    }
-    if (!values.message.trim()) next.message = copy.errors.messageRequired;
-    return next;
-  }, [copy.errors, values]);
+  const [submitErrors, setSubmitErrors] = useState<FormErrors>({});
 
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setSubmitted(false);
@@ -44,9 +50,18 @@ export function ContactForm({ copy }: ContactFormProps) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value?.trim() ?? "";
+    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value?.trim() ?? "";
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value?.trim() ?? "";
+    const submitValues = { name, email, message };
+    const errors = validate(submitValues, copy.errors);
+    setValues(submitValues);
+    setSubmitErrors(errors);
     setSubmitted(true);
-    if (Object.keys(errors).length > 0) return;
-    setValues(initialState);
+    if (Object.keys(errors).length === 0) {
+      setValues(initialState);
+    }
   }
 
   return (
@@ -63,14 +78,15 @@ export function ContactForm({ copy }: ContactFormProps) {
           </label>
           <input
             id="contact-name"
+            name="name"
             type="text"
             value={values.name}
             onChange={(e) => updateField("name", e.target.value)}
             placeholder={copy.placeholders.name}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 focus:border-cyan-300/50 focus:outline-none"
           />
-          {submitted && errors.name ? (
-            <p className="mt-1.5 text-sm text-rose-300">{errors.name}</p>
+          {submitted && submitErrors.name ? (
+            <p className="mt-1.5 text-sm text-rose-300">{submitErrors.name}</p>
           ) : null}
         </div>
         <div>
@@ -79,14 +95,15 @@ export function ContactForm({ copy }: ContactFormProps) {
           </label>
           <input
             id="contact-email"
+            name="email"
             type="email"
             value={values.email}
             onChange={(e) => updateField("email", e.target.value)}
             placeholder={copy.placeholders.email}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 focus:border-cyan-300/50 focus:outline-none"
           />
-          {submitted && errors.email ? (
-            <p className="mt-1.5 text-sm text-rose-300">{errors.email}</p>
+          {submitted && submitErrors.email ? (
+            <p className="mt-1.5 text-sm text-rose-300">{submitErrors.email}</p>
           ) : null}
         </div>
         <div>
@@ -95,14 +112,15 @@ export function ContactForm({ copy }: ContactFormProps) {
           </label>
           <textarea
             id="contact-message"
+            name="message"
             rows={4}
             value={values.message}
             onChange={(e) => updateField("message", e.target.value)}
             placeholder={copy.placeholders.message}
             className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 focus:border-cyan-300/50 focus:outline-none"
           />
-          {submitted && errors.message ? (
-            <p className="mt-1.5 text-sm text-rose-300">{errors.message}</p>
+          {submitted && submitErrors.message ? (
+            <p className="mt-1.5 text-sm text-rose-300">{submitErrors.message}</p>
           ) : null}
         </div>
       </div>
@@ -111,7 +129,7 @@ export function ContactForm({ copy }: ContactFormProps) {
           {copy.submit}
         </Button>
       </div>
-      {submitted && Object.keys(errors).length === 0 ? (
+      {submitted && Object.keys(submitErrors).length === 0 ? (
         <p className="mt-4 text-sm text-emerald-300">{copy.success}</p>
       ) : null}
     </form>
