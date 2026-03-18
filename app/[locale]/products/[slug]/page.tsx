@@ -7,6 +7,7 @@ import { ProductScreenshotCard } from "@/components/product/screenshot-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getDictionary } from "@/data/dictionary";
+import { assetPath } from "@/lib/utils";
 import { getAllProductSlugs, getProductBySlug } from "@/data/products";
 import { buildPageMetadata } from "@/lib/metadata";
 import { getLocalizedHref, isValidLocale, locales, type Locale } from "@/lib/i18n";
@@ -81,7 +82,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         {product.iconPath ? (
           <div className="mb-6">
             <Image
-              src={product.iconPath}
+              src={assetPath(product.iconPath)}
               alt=""
               width={80}
               height={80}

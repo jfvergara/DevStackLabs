@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 
 type Screenshot = {
   title: string;
@@ -43,7 +43,7 @@ export function ProductScreenshotCard({
         >
           {shot.imagePath ? (
             <Image
-              src={shot.imagePath}
+              src={assetPath(shot.imagePath)}
               alt={shot.title}
               width={featured ? 280 : 200}
               height={featured ? 606 : 433}

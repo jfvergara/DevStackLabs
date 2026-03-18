@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 
 import type { Product } from "@/data/products";
+import { assetPath } from "@/lib/utils";
 
 import { Badge } from "../ui/badge";
 
@@ -96,7 +97,7 @@ export function ProductCard({
       {product.iconPath ? (
         <div className="mb-5 flex justify-center">
           <Image
-            src={product.iconPath}
+            src={assetPath(product.iconPath)}
             alt=""
             width={80}
             height={80}
