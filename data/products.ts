@@ -307,7 +307,7 @@ const productRecords: ProductRecord[] = [
     name: "ObraClaro",
     status: "live",
     techStack: ["iOS", "React Native"],
-    demoHref: "https://apps.apple.com/app/obraclaro/idXXXXXXXXX",
+    demoHref: "https://apps.apple.com/app/obraclaro/id6760685801",
     secondaryCtaPath: "/products/obraclaro/soporte",
     iconPath: "/obraclaro-icon.png",
     content: {
