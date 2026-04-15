@@ -48,7 +48,7 @@ export async function generateMetadata({
   const title =
     product.slug === "obraclaro"
       ? (locale === "es"
-          ? "ObraClaro – Cotizaciones y facturas para tu negocio | DevStack Labs"
+          ? "ObraClaro | Cotizaciones y facturas profesionales para contratistas | DevStack Labs"
           : "ObraClaro – Quotes and invoices for your business | DevStack Labs")
       : product.name;
   const description = product.shortDescription;

@@ -195,10 +195,10 @@ const dictionaries: Record<Locale, Dictionary> = {
       featuresEyebrow: "Key Features",
       featuresTitle: "Capabilities designed for real operational use.",
       screenshotsEyebrow: "Screenshots",
-      screenshotsTitle: "Visual placeholders ready for real product imagery.",
+      screenshotsTitle: "Screenshots from the live product.",
       screenshotsDescription:
-        "Each card can be swapped with live screenshots, marketing assets, or interface previews when they are available.",
-      screenshotPlaceholder: "Screenshot Placeholder",
+        "Representative screens from the real interface—the flows you use day to day.",
+      screenshotPlaceholder: "Screenshot unavailable",
       ctaEyebrow: "Interested In This Product",
       ctaTitle: "Explore how this product can support your team.",
       ctaDescription:
@@ -392,10 +392,10 @@ const dictionaries: Record<Locale, Dictionary> = {
       featuresEyebrow: "Funciones clave",
       featuresTitle: "Capacidades diseñadas para uso operativo real.",
       screenshotsEyebrow: "Capturas",
-      screenshotsTitle: "Placeholders visuales listos para imágenes reales del producto.",
+      screenshotsTitle: "Capturas de la app en uso.",
       screenshotsDescription:
-        "Cada tarjeta puede reemplazarse con capturas reales, assets de marketing o vistas previas de interfaz cuando estén disponibles.",
-      screenshotPlaceholder: "Placeholder de captura",
+        "Pantallas representativas de la interfaz real y los flujos principales del producto.",
+      screenshotPlaceholder: "Captura no disponible",
       ctaEyebrow: "Interesado en este producto",
       ctaTitle: "Explora cómo este producto puede apoyar a tu equipo.",
       ctaDescription:

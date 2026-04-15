@@ -345,13 +345,14 @@ const productRecords: ProductRecord[] = [
         secondaryCtaLabel: "Support",
       },
       es: {
-        tagline: "Cotizaciones, presupuestos y facturas claras para tu negocio.",
+        tagline:
+          "Cotiza y factura con documentos que cierran el trato—desde el celular, en minutos.",
         shortDescription:
-          "App offline-first para crear cotizaciones, presupuestos y facturas de forma clara y profesional. Para contratistas y pequeños negocios. Descarga en App Store.",
+          "Cotizaciones, presupuestos y facturas en PDF para contratistas y negocios de servicio. Funciona sin internet en obra; tus datos quedan en tu iPhone. Sin publicidad.",
         overview:
-          "ObraClaro es una app para crear cotizaciones, presupuestos y facturas de forma clara y profesional. Pensada para contratistas, pequeños negocios y prestadores de servicios que necesitan documentos listos en minutos, sin complicaciones.",
+          "En obra no sobra tiempo para armar presupuestos en hojas sueltas ni pelear con formatos. ObraClaro concentra clientes, datos del negocio y documentos en una sola app para que armes cotizaciones, presupuestos y facturas con tu logo y cuentas bancarias, listos para mandar por WhatsApp o imprimir. Pensada para maestros, contratistas, electricistas, plomeros y cualquier negocio que cobra por trabajo bien explicado.",
         problem:
-          "Todo se guarda de forma local en tu dispositivo. No hace falta internet para crear o editar documentos; ideal para obra, campo o cuando no hay señal. Sin analytics de terceros ni publicidad; no compartimos datos con terceros.",
+          "Tu información vive en tu dispositivo: puedes crear y editar sin depender de la señal (ideal en obra o en campo). Sin publicidad, sin analítica de terceros y sin compartir datos con terceros.",
         category: "App móvil",
         targetUsers: [
           "Contratistas, instaladores, técnicos, remodeladores",
@@ -359,20 +360,45 @@ const productRecords: ProductRecord[] = [
           "Cualquier negocio que necesite cotizar y facturar con claridad",
         ],
         keyFeatures: [
-          "Crear cotizaciones, presupuestos y facturas con varias líneas, cantidades, unidades y precios",
-          "Gestionar clientes desde la misma app",
-          "Configurar los datos de tu negocio, logo y cuentas bancarias",
-          "Calcular subtotal, IVA y total automáticamente",
-          "Exportar documentos en PDF o como imagen para compartir o imprimir",
-          "Guardar todo en tu dispositivo y trabajar sin conexión",
+          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga y tú cobras con respaldo claro",
+          "Clientes en un solo lugar: datos y contexto a mano para seguimiento y nuevas cotizaciones",
+          "Identidad de negocio en cada PDF: logo, datos fiscales y cuentas bancarias configurados una vez",
+          "Subtotal, impuestos y total calculados al instante: menos errores manuales y menos vueltas con el cliente",
+          "Exporta en PDF o imagen para WhatsApp, correo o impresión—todo desde el teléfono",
+          "Trabajo offline y almacenamiento local: sigues en obra aunque falle la red",
         ],
         screenshots: [
-          { title: "Todo tu negocio en orden", caption: "Guarda clientes, datos del negocio y documentos en un solo lugar.", imagePath: "/obraclaro/home.png" },
-          { title: "Gestiona tus clientes", caption: "Administra clientes desde la misma app.", imagePath: "/obraclaro/clientes.png" },
-          { title: "Cotiza con claridad", caption: "Cotizaciones, presupuestos y facturas en un solo lugar.", imagePath: "/obraclaro/documentos.png" },
-          { title: "Configura tu negocio", caption: "Datos del negocio, logo y cuentas bancarias.", imagePath: "/obraclaro/perfil-negocio.png" },
-          { title: "Calcula automáticamente", caption: "Subtotal, IVA y total listos al instante.", imagePath: "/obraclaro/factura-editor.png" },
-          { title: "Comparte documentos profesionales", caption: "Exporta en PDF o imagen desde tu celular.", imagePath: "/obraclaro/factura-pdf.png" },
+          {
+            title: "Tu negocio, a un toque",
+            caption:
+              "Clientes, datos del negocio y documentos en un solo lugar—menos saltos entre apps y más tiempo en lo que factura.",
+            imagePath: "/obraclaro/home.png",
+          },
+          {
+            title: "Cartera de clientes siempre contigo",
+            caption: "Alta, edición y búsqueda sin salir del flujo de cotización.",
+            imagePath: "/obraclaro/clientes.png",
+          },
+          {
+            title: "Del presupuesto a la factura, sin fricción",
+            caption: "Cotizaciones, presupuestos y facturas ordenados y listos para enviar.",
+            imagePath: "/obraclaro/documentos.png",
+          },
+          {
+            title: "Cara profesional en cada envío",
+            caption: "Logo, razón social y cuentas bancarias: configuras una vez y aplica a todo.",
+            imagePath: "/obraclaro/perfil-negocio.png",
+          },
+          {
+            title: "Números que cierran solos",
+            caption: "Subtotal, IVA y total se actualizan mientras cargas líneas—sin planilla aparte.",
+            imagePath: "/obraclaro/factura-editor.png",
+          },
+          {
+            title: "Comparte y cobra más rápido",
+            caption: "PDF o imagen listos para WhatsApp, impresión o archivo en segundos.",
+            imagePath: "/obraclaro/factura-pdf.png",
+          },
         ],
         primaryCtaLabel: "Descargar en App Store",
         secondaryCtaLabel: "Soporte",
