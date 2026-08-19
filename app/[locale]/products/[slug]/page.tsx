@@ -45,12 +45,17 @@ export async function generateMetadata({
     });
   }
 
-  const title =
-    product.slug === "obraclaro"
-      ? (locale === "es"
-          ? "ObraClaro | Cotizaciones y facturas profesionales para contratistas | DevStack Labs"
-          : "ObraClaro – Quotes and invoices for your business | DevStack Labs")
-      : product.name;
+  const productTitles: Record<string, Record<Locale, string>> = {
+    obraclaro: {
+      es: "ObraClaro | Cotizaciones y facturas profesionales para contratistas",
+      en: "ObraClaro – Quotes and invoices for your business",
+    },
+    tallerpro: {
+      es: "Taller Pro | Cotizaciones, presupuestos y facturas para tu taller",
+      en: "Taller Pro – Quotes, estimates, and invoices for auto workshops",
+    },
+  };
+  const title = productTitles[product.slug]?.[locale] ?? product.name;
   const description = product.shortDescription;
 
   return buildPageMetadata({
@@ -105,6 +110,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <Button href={product.demoHref} size="lg">
             {product.primaryCtaLabel}
           </Button>
+          {product.playStoreHref && product.playStoreCtaLabel ? (
+            <Button href={product.playStoreHref} size="lg">
+              {product.playStoreCtaLabel}
+            </Button>
+          ) : null}
           <Button
             href={
               product.secondaryCtaHref ??
@@ -131,7 +141,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <h2 className="text-xl font-semibold text-white">
           {dictionary.productDetail.screenshotsTitle}
         </h2>
-        {product.slug === "obraclaro" && product.screenshots.length >= 6 ? (
+        {product.screenshots.length >= 6 ? (
           <div className="mt-8 space-y-8">
             <div className="grid gap-6 sm:grid-cols-2">
               <ProductScreenshotCard
@@ -172,6 +182,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <Button href={product.demoHref} size="lg">
           {product.primaryCtaLabel}
         </Button>
+        {product.playStoreHref && product.playStoreCtaLabel ? (
+          <Button href={product.playStoreHref} size="lg">
+            {product.playStoreCtaLabel}
+          </Button>
+        ) : null}
         <Button
           href={
             product.secondaryCtaHref ??

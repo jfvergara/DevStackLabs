@@ -29,15 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  const obraclaroSubpages = ["privacidad", "soporte"] as const;
-  const obraclaroEntries = locales.flatMap((locale) =>
-    obraclaroSubpages.map((sub) => ({
-      url: `${baseUrl}/${locale}/products/obraclaro/${sub}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    })),
+  const appLegalSlugs = ["obraclaro", "tallerpro"] as const;
+  const legalSubpages = ["privacidad", "soporte"] as const;
+  const legalEntries = locales.flatMap((locale) =>
+    appLegalSlugs.flatMap((slug) =>
+      legalSubpages.map((sub) => ({
+        url: `${baseUrl}/${locale}/products/${slug}/${sub}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly" as const,
+        priority: 0.5,
+      })),
+    ),
   );
 
-  return [...staticEntries, ...productEntries, ...obraclaroEntries];
+  return [...staticEntries, ...productEntries, ...legalEntries];
 }

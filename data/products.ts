@@ -12,6 +12,7 @@ type ProductLocaleContent = {
   keyFeatures: string[];
   screenshots: { title: string; caption: string; imagePath?: string }[];
   primaryCtaLabel: string;
+  playStoreCtaLabel?: string;
   secondaryCtaLabel: string;
 };
 
@@ -21,6 +22,8 @@ type ProductRecord = {
   status: ProductStatus;
   techStack: string[];
   demoHref: string;
+  /** Optional Google Play URL; shown as an extra primary CTA when set. */
+  playStoreHref?: string;
   /** Optional path for secondary CTA (e.g. /products/obraclaro/soporte). Localized in getProducts. */
   secondaryCtaPath?: string;
   /** Optional app/product icon path (e.g. /obraclaro-icon.png). */
@@ -34,6 +37,7 @@ export type Product = {
   status: ProductStatus;
   techStack: string[];
   demoHref: string;
+  playStoreHref?: string;
   productHref: string;
   /** When set, secondary CTA links here instead of /contact. */
   secondaryCtaHref?: string;
@@ -405,6 +409,112 @@ const productRecords: ProductRecord[] = [
       },
     },
   },
+  {
+    slug: "tallerpro",
+    name: "Taller Pro",
+    status: "live",
+    techStack: ["iOS", "Android", "React Native"],
+    demoHref: "https://apps.apple.com/app/tallerpro",
+    playStoreHref: "https://play.google.com/store/apps/details?id=com.tallerpro.app",
+    secondaryCtaPath: "/products/tallerpro/soporte",
+    iconPath: "/tallerpro-icon.png",
+    content: {
+      en: {
+        tagline: "Quotes, repair estimates, and invoices for your workshop, with vehicle details.",
+        shortDescription:
+          "Quote, estimate, and invoice workshop jobs with vehicle details. Works offline; your data stays on your phone. No ads.",
+        overview:
+          "Taller Pro is an app for creating service quotes, repair estimates, and invoices clearly and professionally. Built for mechanical and auto-electrical workshops, tire shops, parts stores, and independent mechanics who need documents ready in minutes, without hassle.",
+        problem:
+          "Everything is stored locally on your device. You don't need internet to create or edit documents—ideal for the shop floor, on-site work, or mobile service. No third-party analytics or advertising; we don't share data with third parties.",
+        category: "Mobile app",
+        targetUsers: [
+          "General mechanical and auto-electrical workshops",
+          "Tire shops, parts stores, independent mechanics",
+          "Bodywork, brakes, suspension, and mobile service",
+        ],
+        keyFeatures: [
+          "Create service quotes, repair estimates, and invoices with multiple lines, quantities, units, and prices",
+          "Optional vehicle details on each document: plates, make and model, year, and mileage",
+          "Manage clients from the same app",
+          "Set up your workshop profile, logo, and bank accounts",
+          "Calculate subtotal, tax, and total automatically",
+          "Export as PDF or image and work offline on your phone",
+        ],
+        screenshots: [
+          { title: "Your workshop in order", caption: "Clients, workshop profile, and documents in one place.", imagePath: "/tallerpro/home.png" },
+          { title: "Manage your clients", caption: "Manage clients from the same app.", imagePath: "/tallerpro/clientes.png" },
+          { title: "Quote the job", caption: "Service quotes, repair estimates, and invoices in one place.", imagePath: "/tallerpro/documentos.png" },
+          { title: "Set up your workshop", caption: "Workshop details, logo, and bank accounts.", imagePath: "/tallerpro/perfil-taller.png" },
+          { title: "Built for the shop floor", caption: "Optional vehicle data: plates, make and model, year, and mileage.", imagePath: "/tallerpro/documento-editor.png" },
+          { title: "Share professionally", caption: "Export as PDF or image from your phone.", imagePath: "/tallerpro/factura-pdf.png" },
+        ],
+        primaryCtaLabel: "Download on App Store",
+        playStoreCtaLabel: "Download on Google Play",
+        secondaryCtaLabel: "Support",
+      },
+      es: {
+        tagline:
+          "Cotiza, presupuesta y factura el servicio de tu taller, con datos del vehículo.",
+        shortDescription:
+          "Cotizaciones, presupuestos y facturas para tu taller, con datos del vehículo. Funciona sin internet; tus datos quedan en tu celular. Sin publicidad.",
+        overview:
+          "En el taller no sobra tiempo para armar cotizaciones en hojas sueltas ni pelear con formatos. Taller Pro concentra clientes, datos del taller y documentos en una sola app para que armes cotizaciones de servicio, presupuestos de reparación y facturas con datos del vehículo, tu logo y cuentas bancarias, listos para mandar por WhatsApp o imprimir. Pensada para talleres mecánicos, eléctricos, llanteras, refaccionarias y mecánicos independientes.",
+        problem:
+          "Tu información vive en tu dispositivo: puedes crear y editar sin depender de la señal (ideal en el taller, en sitio o en servicios móviles). Sin publicidad, sin analítica de terceros y sin compartir datos con terceros.",
+        category: "App móvil",
+        targetUsers: [
+          "Talleres mecánicos y eléctricos automotrices",
+          "Llanteras, refaccionarias y mecánicos independientes",
+          "Hojalatería, frenos, suspensión y servicios móviles",
+        ],
+        keyFeatures: [
+          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga—mano de obra, refacción o servicio—y tú cobras con respaldo claro",
+          "Datos opcionales del vehículo en cada documento: placas, marca y modelo, año y kilometraje",
+          "Clientes en un solo lugar: datos y contexto a mano para seguimiento y nuevas cotizaciones",
+          "Identidad del taller en cada PDF: logo, datos y cuentas bancarias configurados una vez",
+          "Subtotal, IVA y total calculados al instante: menos errores manuales y menos vueltas con el cliente",
+          "Exporta en PDF o imagen y trabaja sin internet: WhatsApp, impresión o archivo, incluso en sitio o en servicios móviles",
+        ],
+        screenshots: [
+          {
+            title: "Tu taller en orden",
+            caption:
+              "Clientes, perfil del taller y documentos en un solo lugar—menos saltos entre apps y más tiempo en el servicio.",
+            imagePath: "/tallerpro/home.png",
+          },
+          {
+            title: "Cartera de clientes siempre contigo",
+            caption: "Alta, edición y búsqueda sin salir del flujo de cotización.",
+            imagePath: "/tallerpro/clientes.png",
+          },
+          {
+            title: "Cotiza el servicio",
+            caption: "Cotizaciones de servicio, presupuestos de reparación y facturas ordenados y listos para enviar.",
+            imagePath: "/tallerpro/documentos.png",
+          },
+          {
+            title: "Cara profesional en cada envío",
+            caption: "Logo, datos del taller y cuentas bancarias: configuras una vez y aplica a todo.",
+            imagePath: "/tallerpro/perfil-taller.png",
+          },
+          {
+            title: "Hecha para el taller",
+            caption: "Placas, marca y modelo, año y kilometraje en cada documento—el cliente ve el servicio con claridad.",
+            imagePath: "/tallerpro/documento-editor.png",
+          },
+          {
+            title: "Comparte profesional",
+            caption: "PDF o imagen listos para WhatsApp, impresión o archivo en segundos.",
+            imagePath: "/tallerpro/factura-pdf.png",
+          },
+        ],
+        primaryCtaLabel: "Descargar en App Store",
+        playStoreCtaLabel: "Descargar en Google Play",
+        secondaryCtaLabel: "Soporte",
+      },
+    },
+  },
 ];
 
 export function getProducts(locale: Locale): Product[] {
@@ -414,6 +524,7 @@ export function getProducts(locale: Locale): Product[] {
     status: product.status,
     techStack: product.techStack,
     demoHref: product.demoHref,
+    playStoreHref: product.playStoreHref,
     productHref: getLocalizedHref(locale, `/products/${product.slug}`),
     secondaryCtaHref: product.secondaryCtaPath
       ? getLocalizedHref(locale, product.secondaryCtaPath)
