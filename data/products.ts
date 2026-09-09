@@ -414,7 +414,7 @@ const productRecords: ProductRecord[] = [
     name: "Taller Pro",
     status: "live",
     techStack: ["iOS", "Android", "React Native"],
-    demoHref: "https://apps.apple.com/app/tallerpro",
+    demoHref: "https://apps.apple.com/app/tallerpro/id6802937129",
     playStoreHref: "https://play.google.com/store/apps/details?id=com.tallerpro.app",
     secondaryCtaPath: "/products/tallerpro/soporte",
     iconPath: "/tallerpro-icon.png",
@@ -511,6 +511,109 @@ const productRecords: ProductRecord[] = [
         ],
         primaryCtaLabel: "Descargar en App Store",
         playStoreCtaLabel: "Descargar en Google Play",
+        secondaryCtaLabel: "Soporte",
+      },
+    },
+  },
+  {
+    slug: "floreriapro",
+    name: "Florería Pro",
+    status: "comingSoon",
+    techStack: ["iOS", "Android", "Flutter"],
+    // TODO: replace with the real store URLs once published:
+    // demoHref: "https://apps.apple.com/app/floreriapro/idXXXXXXXXXX"
+    // playStoreHref: "https://play.google.com/store/apps/details?id=com.floreriapro.app"
+    demoHref: "mailto:devstacklabshq@gmail.com?subject=Florer%C3%ADa%20Pro",
+    secondaryCtaPath: "/products/floreriapro/soporte",
+    iconPath: "/floreriapro-icon.png",
+    content: {
+      en: {
+        tagline: "Quotes, event estimates, and invoices for your flower shop, with order details.",
+        shortDescription:
+          "Quote, estimate, and invoice floral work with order details. Works offline; your data stays on your phone. No ads.",
+        overview:
+          "Florería Pro is an app for creating arrangement quotes, event estimates, and invoices clearly and professionally. Built for neighborhood flower shops, independent florists, event work, and funeral service who need documents ready in minutes, without hassle.",
+        problem:
+          "Everything is stored locally on your device. You don't need internet to create or edit documents—ideal for the counter, events, or deliveries. No third-party analytics or advertising; we don't share data with third parties.",
+        category: "Mobile app",
+        targetUsers: [
+          "Neighborhood flower shops and independent florists",
+          "Event work: weddings, quinceañeras, corporate orders",
+          "Funeral service, hospital deliveries, and home delivery",
+        ],
+        keyFeatures: [
+          "Create arrangement quotes, event estimates, and invoices with multiple lines, quantities, units, and prices",
+          "Optional order details on each document: occasion, recipient, delivery date, and delivery place",
+          "Manage clients from the same app",
+          "Set up your flower shop profile, logo, and bank accounts",
+          "Calculate subtotal, tax, and total automatically",
+          "Export as PDF or image and work offline on your phone",
+        ],
+        screenshots: [
+          { title: "Your flower shop in order", caption: "Clients, shop profile, and documents in one place." },
+          { title: "Manage your clients", caption: "Manage clients from the same app." },
+          { title: "Quote the arrangement", caption: "Arrangement quotes, event estimates, and invoices in one place." },
+          { title: "Order details on every document", caption: "Occasion, recipient, delivery date, and delivery place." },
+          { title: "Supply notes for each event", caption: "Track what's still missing before the arrangement goes out." },
+          { title: "Share professionally", caption: "Export as PDF or image from your phone." },
+        ],
+        primaryCtaLabel: "Get launch updates",
+        secondaryCtaLabel: "Support",
+      },
+      es: {
+        tagline:
+          "Cotiza, presupuesta y factura los arreglos de tu florería, con datos del pedido.",
+        shortDescription:
+          "Cotizaciones, presupuestos y facturas para tu florería, con datos del pedido. Funciona sin internet; tus datos quedan en tu celular. Sin publicidad.",
+        overview:
+          "En la florería el pedido entra por teléfono, por WhatsApp o en el mostrador, y hay que cotizarlo mientras se atiende al siguiente cliente. Florería Pro concentra clientes, datos de la florería y documentos en una sola app para que armes cotizaciones de arreglo, presupuestos de evento y facturas con datos del pedido, tu logo y cuentas bancarias, listos para mandar por WhatsApp o imprimir. Pensada para florerías de barrio, floristas independientes, eventos y servicio funeral.",
+        problem:
+          "Tu información vive en tu dispositivo: puedes crear y editar sin depender de la señal (ideal en el mostrador, en el evento o en la entrega). Sin publicidad, sin analítica de terceros y sin compartir datos con terceros.",
+        category: "App móvil",
+        targetUsers: [
+          "Florerías de barrio y floristas independientes",
+          "Eventos: bodas, XV años y pedidos corporativos",
+          "Servicio funeral, entregas a hospital y a domicilio",
+        ],
+        keyFeatures: [
+          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga—flor, base, mano de obra o entrega—y tú cobras con respaldo claro",
+          "Datos opcionales del pedido en cada documento: ocasión, destinatario, fecha y lugar de entrega",
+          "Clientes en un solo lugar: datos y contexto a mano para seguimiento y nuevos pedidos",
+          "Identidad de tu florería en cada PDF: logo, datos y cuentas bancarias configurados una vez",
+          "Subtotal, IVA y total calculados al instante: menos errores manuales y menos vueltas con el cliente",
+          "Exporta en PDF o imagen y trabaja sin internet: WhatsApp, impresión o archivo, incluso en el evento o en la entrega",
+        ],
+        screenshots: [
+          {
+            title: "Tu florería en orden",
+            caption:
+              "Clientes, perfil de la florería y documentos en un solo lugar—menos saltos entre apps y más tiempo en el arreglo.",
+          },
+          {
+            title: "Cartera de clientes siempre contigo",
+            caption: "Alta, edición y búsqueda sin salir del flujo de cotización.",
+          },
+          {
+            title: "Cotiza el arreglo",
+            caption:
+              "Cotizaciones de arreglo, presupuestos de evento y facturas ordenados y listos para enviar.",
+          },
+          {
+            title: "Datos del pedido en cada documento",
+            caption:
+              "Ocasión, destinatario, fecha y lugar de entrega—el cliente confirma el pedido sin llamadas de más.",
+          },
+          {
+            title: "Notas de insumos para cada evento",
+            caption:
+              "Lo que falta comprar para el arreglo, marcado y a la vista antes de la entrega.",
+          },
+          {
+            title: "Comparte profesional",
+            caption: "PDF o imagen listos para WhatsApp, impresión o archivo en segundos.",
+          },
+        ],
+        primaryCtaLabel: "Recibir aviso del lanzamiento",
         secondaryCtaLabel: "Soporte",
       },
     },

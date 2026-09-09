@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  const appLegalSlugs = ["obraclaro", "tallerpro"] as const;
+  const appLegalSlugs = ["obraclaro", "tallerpro", "floreriapro"] as const;
   const legalSubpages = ["privacidad", "soporte"] as const;
   const legalEntries = locales.flatMap((locale) =>
     appLegalSlugs.flatMap((slug) =>

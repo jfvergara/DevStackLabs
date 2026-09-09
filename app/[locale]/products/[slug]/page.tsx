@@ -54,6 +54,10 @@ export async function generateMetadata({
       es: "Taller Pro | Cotizaciones, presupuestos y facturas para tu taller",
       en: "Taller Pro – Quotes, estimates, and invoices for auto workshops",
     },
+    floreriapro: {
+      es: "Florería Pro | Cotizaciones, presupuestos y facturas para tu florería",
+      en: "Florería Pro – Quotes, estimates, and invoices for flower shops",
+    },
   };
   const title = productTitles[product.slug]?.[locale] ?? product.name;
   const description = product.shortDescription;
