@@ -322,7 +322,7 @@ const productRecords: ProductRecord[] = [
         overview:
           "ObraClaro is an app to create quotes, estimates, and invoices clearly and professionally. Built for contractors, small businesses, and service providers who need professional documents in minutes, without hassle.",
         problem:
-          "Everything is stored locally on your device. You don't need internet to create or edit documents—ideal for job sites, the field, or when there's no signal. No third-party analytics or advertising; we don't share data with third parties.",
+          "Everything is stored locally on your device. You don't need internet to create or edit documents. Ideal for job sites, the field, or when there's no signal. No third-party analytics or advertising; we don't share data with third parties.",
         category: "Mobile app",
         targetUsers: [
           "Contractors, installers, technicians, remodelers",
@@ -350,7 +350,7 @@ const productRecords: ProductRecord[] = [
       },
       es: {
         tagline:
-          "Cotiza y factura con documentos que cierran el trato—desde el celular, en minutos.",
+          "Cotiza y factura con documentos que cierran el trato, desde el celular y en minutos.",
         shortDescription:
           "Cotizaciones, presupuestos y facturas en PDF para contratistas y negocios de servicio. Funciona sin internet en obra; tus datos quedan en tu iPhone. Sin publicidad.",
         overview:
@@ -368,14 +368,14 @@ const productRecords: ProductRecord[] = [
           "Clientes en un solo lugar: datos y contexto a mano para seguimiento y nuevas cotizaciones",
           "Identidad de negocio en cada PDF: logo, datos fiscales y cuentas bancarias configurados una vez",
           "Subtotal, impuestos y total calculados al instante: menos errores manuales y menos vueltas con el cliente",
-          "Exporta en PDF o imagen para WhatsApp, correo o impresión—todo desde el teléfono",
+          "Exporta en PDF o imagen para WhatsApp, correo o impresión: todo desde el teléfono",
           "Trabajo offline y almacenamiento local: sigues en obra aunque falle la red",
         ],
         screenshots: [
           {
             title: "Tu negocio, a un toque",
             caption:
-              "Clientes, datos del negocio y documentos en un solo lugar—menos saltos entre apps y más tiempo en lo que factura.",
+              "Clientes, datos del negocio y documentos en un solo lugar: menos saltos entre apps y más tiempo en lo que factura.",
             imagePath: "/obraclaro/home.png",
           },
           {
@@ -395,7 +395,7 @@ const productRecords: ProductRecord[] = [
           },
           {
             title: "Números que cierran solos",
-            caption: "Subtotal, IVA y total se actualizan mientras cargas líneas—sin planilla aparte.",
+            caption: "Subtotal, IVA y total se actualizan mientras cargas líneas, sin planilla aparte.",
             imagePath: "/obraclaro/factura-editor.png",
           },
           {
@@ -426,7 +426,7 @@ const productRecords: ProductRecord[] = [
         overview:
           "Taller Pro is an app for creating service quotes, repair estimates, and invoices clearly and professionally. Built for mechanical and auto-electrical workshops, tire shops, parts stores, and independent mechanics who need documents ready in minutes, without hassle.",
         problem:
-          "Everything is stored locally on your device. You don't need internet to create or edit documents—ideal for the shop floor, on-site work, or mobile service. No third-party analytics or advertising; we don't share data with third parties.",
+          "Everything is stored locally on your device. You don't need internet to create or edit documents. Ideal for the shop floor, on-site work, or mobile service. No third-party analytics or advertising; we don't share data with third parties.",
         category: "Mobile app",
         targetUsers: [
           "General mechanical and auto-electrical workshops",
@@ -469,7 +469,7 @@ const productRecords: ProductRecord[] = [
           "Hojalatería, frenos, suspensión y servicios móviles",
         ],
         keyFeatures: [
-          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga—mano de obra, refacción o servicio—y tú cobras con respaldo claro",
+          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga (mano de obra, refacción o servicio) y tú cobras con respaldo claro",
           "Datos opcionales del vehículo en cada documento: placas, marca y modelo, año y kilometraje",
           "Clientes en un solo lugar: datos y contexto a mano para seguimiento y nuevas cotizaciones",
           "Identidad del taller en cada PDF: logo, datos y cuentas bancarias configurados una vez",
@@ -480,7 +480,7 @@ const productRecords: ProductRecord[] = [
           {
             title: "Tu taller en orden",
             caption:
-              "Clientes, perfil del taller y documentos en un solo lugar—menos saltos entre apps y más tiempo en el servicio.",
+              "Clientes, perfil del taller y documentos en un solo lugar: menos saltos entre apps y más tiempo en el servicio.",
             imagePath: "/tallerpro/home.png",
           },
           {
@@ -500,7 +500,7 @@ const productRecords: ProductRecord[] = [
           },
           {
             title: "Hecha para el taller",
-            caption: "Placas, marca y modelo, año y kilometraje en cada documento—el cliente ve el servicio con claridad.",
+            caption: "Placas, marca y modelo, año y kilometraje en cada documento: el cliente ve el servicio con claridad.",
             imagePath: "/tallerpro/documento-editor.png",
           },
           {
@@ -534,7 +534,7 @@ const productRecords: ProductRecord[] = [
         overview:
           "Florería Pro is an app for creating arrangement quotes, event estimates, and invoices clearly and professionally. Built for neighborhood flower shops, independent florists, event work, and funeral service who need documents ready in minutes, without hassle.",
         problem:
-          "Everything is stored locally on your device. You don't need internet to create or edit documents—ideal for the counter, events, or deliveries. No third-party analytics or advertising; we don't share data with third parties.",
+          "Everything is stored locally on your device. You don't need internet to create or edit documents. Ideal for the counter, events, or deliveries. No third-party analytics or advertising; we don't share data with third parties.",
         category: "Mobile app",
         targetUsers: [
           "Neighborhood flower shops and independent florists",
@@ -550,12 +550,12 @@ const productRecords: ProductRecord[] = [
           "Export as PDF or image and work offline on your phone",
         ],
         screenshots: [
-          { title: "Your flower shop in order", caption: "Clients, shop profile, and documents in one place." },
-          { title: "Manage your clients", caption: "Manage clients from the same app." },
-          { title: "Quote the arrangement", caption: "Arrangement quotes, event estimates, and invoices in one place." },
-          { title: "Order details on every document", caption: "Occasion, recipient, delivery date, and delivery place." },
-          { title: "Supply notes for each event", caption: "Track what's still missing before the arrangement goes out." },
-          { title: "Share professionally", caption: "Export as PDF or image from your phone." },
+          { title: "Your flower shop in order", caption: "Clients, shop profile, and documents in one place.", imagePath: "/floreriapro/home.png" },
+          { title: "Manage your clients", caption: "Manage clients from the same app.", imagePath: "/floreriapro/clientes.png" },
+          { title: "Quote the arrangement", caption: "Arrangement quotes, event estimates, and invoices in one place.", imagePath: "/floreriapro/documentos.png" },
+          { title: "Order details on every document", caption: "Occasion, recipient, delivery date, and delivery place.", imagePath: "/floreriapro/documento-editor.png" },
+          { title: "Supply notes for each event", caption: "Track what's still missing before the arrangement goes out.", imagePath: "/floreriapro/notas.png" },
+          { title: "Share professionally", caption: "Export as PDF or image from your phone.", imagePath: "/floreriapro/cotizacion-pdf.png" },
         ],
         primaryCtaLabel: "Get launch updates",
         secondaryCtaLabel: "Support",
@@ -576,7 +576,7 @@ const productRecords: ProductRecord[] = [
           "Servicio funeral, entregas a hospital y a domicilio",
         ],
         keyFeatures: [
-          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga—flor, base, mano de obra o entrega—y tú cobras con respaldo claro",
+          "Documentos con varias líneas, cantidades, unidades y precios: el cliente entiende qué paga (flor, base, mano de obra o entrega) y tú cobras con respaldo claro",
           "Datos opcionales del pedido en cada documento: ocasión, destinatario, fecha y lugar de entrega",
           "Clientes en un solo lugar: datos y contexto a mano para seguimiento y nuevos pedidos",
           "Identidad de tu florería en cada PDF: logo, datos y cuentas bancarias configurados una vez",
@@ -587,30 +587,36 @@ const productRecords: ProductRecord[] = [
           {
             title: "Tu florería en orden",
             caption:
-              "Clientes, perfil de la florería y documentos en un solo lugar—menos saltos entre apps y más tiempo en el arreglo.",
+              "Clientes, perfil de la florería y documentos en un solo lugar: menos saltos entre apps y más tiempo en el arreglo.",
+            imagePath: "/floreriapro/home.png",
           },
           {
             title: "Cartera de clientes siempre contigo",
             caption: "Alta, edición y búsqueda sin salir del flujo de cotización.",
+            imagePath: "/floreriapro/clientes.png",
           },
           {
             title: "Cotiza el arreglo",
             caption:
               "Cotizaciones de arreglo, presupuestos de evento y facturas ordenados y listos para enviar.",
+            imagePath: "/floreriapro/documentos.png",
           },
           {
             title: "Datos del pedido en cada documento",
             caption:
-              "Ocasión, destinatario, fecha y lugar de entrega—el cliente confirma el pedido sin llamadas de más.",
+              "Ocasión, destinatario, fecha y lugar de entrega: el cliente confirma el pedido sin llamadas de más.",
+            imagePath: "/floreriapro/documento-editor.png",
           },
           {
             title: "Notas de insumos para cada evento",
             caption:
               "Lo que falta comprar para el arreglo, marcado y a la vista antes de la entrega.",
+            imagePath: "/floreriapro/notas.png",
           },
           {
             title: "Comparte profesional",
             caption: "PDF o imagen listos para WhatsApp, impresión o archivo en segundos.",
+            imagePath: "/floreriapro/cotizacion-pdf.png",
           },
         ],
         primaryCtaLabel: "Recibir aviso del lanzamiento",

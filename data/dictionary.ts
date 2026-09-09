@@ -197,7 +197,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       screenshotsEyebrow: "Screenshots",
       screenshotsTitle: "Screenshots from the live product.",
       screenshotsDescription:
-        "Representative screens from the real interface—the flows you use day to day.",
+        "Representative screens from the real interface: the flows you use day to day.",
       screenshotPlaceholder: "Screenshot unavailable",
       ctaEyebrow: "Interested In This Product",
       ctaTitle: "Explore how this product can support your team.",
