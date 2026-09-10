@@ -520,10 +520,10 @@ const productRecords: ProductRecord[] = [
     name: "Florería Pro",
     status: "comingSoon",
     techStack: ["iOS", "Android", "Flutter"],
-    // TODO: replace with the real store URLs once published:
-    // demoHref: "https://apps.apple.com/app/floreriapro/idXXXXXXXXXX"
+    // TODO: add once the Play Store listing is published:
     // playStoreHref: "https://play.google.com/store/apps/details?id=com.floreriapro.app"
-    demoHref: "mailto:devstacklabshq@gmail.com?subject=Florer%C3%ADa%20Pro",
+    // plus playStoreCtaLabel in both locales. Flip status to "live" on release.
+    demoHref: "https://apps.apple.com/app/floreriapro/id6808008218",
     secondaryCtaPath: "/products/floreriapro/soporte",
     iconPath: "/floreriapro-icon.png",
     content: {
@@ -557,7 +557,7 @@ const productRecords: ProductRecord[] = [
           { title: "Supply notes for each event", caption: "Track what's still missing before the arrangement goes out.", imagePath: "/floreriapro/notas.png" },
           { title: "Share professionally", caption: "Export as PDF or image from your phone.", imagePath: "/floreriapro/cotizacion-pdf.png" },
         ],
-        primaryCtaLabel: "Get launch updates",
+        primaryCtaLabel: "Download on App Store",
         secondaryCtaLabel: "Support",
       },
       es: {
@@ -619,7 +619,7 @@ const productRecords: ProductRecord[] = [
             imagePath: "/floreriapro/cotizacion-pdf.png",
           },
         ],
-        primaryCtaLabel: "Recibir aviso del lanzamiento",
+        primaryCtaLabel: "Descargar en App Store",
         secondaryCtaLabel: "Soporte",
       },
     },
